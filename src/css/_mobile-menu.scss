@@ -1,7 +1,7 @@
 // Toggle Button
 // This controls the button that opens and closes the menu
 //* Colors
-$omm-button-icon-color: #2E2554 !default;
+$omm-button-icon-color: #3F4857 !default;
 $omm-button-bg-color: '' !default;
 $omm-button-icon-color-hover: "" !default;
 $omm-button-bg-color-hover: "" !default;
@@ -22,18 +22,18 @@ $omm-text-transform: "" !default; // text transform value
 $omm-button-radius: 5px !default;
 $omm-button-position: absolute !default; // absolute, fixed
 $omm-button-position-top: 18px !default;
-$omm-button-position-right: "" !default;
+$omm-button-position-right: 15px !default;
 $omm-button-position-bottom: "" !default;
-$omm-button-position-left: 15px !default;
+$omm-button-position-left: "" !default;
 
 // Menu
 // This controls the menus appearance when open
-$omm-body-bg-color: #091f4a !default;
+$omm-body-bg-color: #fff !default;
 $omm-menu-bg-color: #fff !default;
 $omm-transition-duration: 0.5s !default;
 $omm-show-breakpoint: 991px !default;
-$omm-menu-direction: left !default; // left, right, full
-$omm-menu-width: 70vw !default; // for left and right directions only
+$omm-menu-direction: right !default; // left, right, full
+$omm-menu-width: 150px !default; // for left and right directions only
 $omm-content-selectable: false !default; // selectable content while menu is open
 $omm-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2) !default; // open menu shadow on content wrapper
 
