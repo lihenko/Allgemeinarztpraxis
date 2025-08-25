@@ -133,6 +133,108 @@ body, html{
     flex-shrink: 0;
   }
 
+  #buttons{
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    & .termin-buchen{
+      display: flex;
+      background-color: #3F4857;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 287px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(225px);
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(0);
+      }
+    }
+    & .rezept-bestellen{
+      display: flex;
+      background-color: #CB9597;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 287px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(225px);
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(0);
+      }
+    }
+    & .sprechstunden{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #EFD8D4;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 287px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 29px;
+      transition: all 0.3s ease-in-out;
+      transform: translateX(225px);
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-data{
+        font-size: 0px;
+        line-height: 14px;
+        height: 0;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover{
+        transform: translateX(0);
+        & .buttons-data{
+          font-size: 8px;
+          height: auto;
+          padding-top: 25px;
+          padding-left: 45px;
+          padding-right: 15px;
+        }
+        & .buttons-icon{
+          width: 100%;
+          & img{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+
 
  @keyframes ticker {
   0% {
