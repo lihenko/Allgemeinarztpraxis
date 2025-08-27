@@ -27,7 +27,36 @@ $gold : #AD954F;
 }
 
 @media screen and (min-width: 768px){
+  .home-slider{
+    & .slide-item{
+      min-height: 700px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      & .slide-data{
+        color: #fff;
+        font-size: 42px;
+        font-weight: 300;
+      }
+    }
+  }
+  .benefits-slider-left-transparence{
+    background: linear-gradient(270.00deg, rgba(247, 235, 233, 0),rgba(247, 235, 233, 1) 100%);
+    position: absolute;
+    left: 0;
+    top: 0; 
+    bottom: 0;
+    width: 166px;
+  }
 
+  .benefits-slider-right-transparence{
+    background: linear-gradient(90.00deg, rgba(247, 235, 233, 0),rgba(247, 235, 233, 1) 100%);
+    position: absolute;
+    right: 0;
+    top: 0; 
+    bottom: 0;
+    width: 166px;
+  }
 }
 
 @media screen and (min-width: 992px){
@@ -44,7 +73,12 @@ $gold : #AD954F;
 }
 
 @media screen and (min-width: 1200px){
-
+  .services{
+    & .service:nth-child(even){
+      margin-top: 80px;
+    }
+      
+  } 
 }
 
 
