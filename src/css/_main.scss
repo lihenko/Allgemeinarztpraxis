@@ -28,7 +28,7 @@ body, html{
         @apply text-black text-xs sm:text-base leading-normal lg:text-lg  xxl:text-xxl font-body;
     }
     h1, .h1{
-        @apply text-[22px] lg:text-[28px] xl:text-[64px] xxl:text-[82px] leading-[1.1] font-title font-bold;
+        @apply text-[48px] lg:text-[56px] xl:text-[64px] xxl:text-[82px] leading-[1.1] font-title font-bold;
     }
     h2, .h2{
       @apply text-[20px] lg:text-[24px] xl:text-[32px] xxl:text-[80px] leading-[1.1] font-title font-bold;
@@ -361,9 +361,43 @@ body, html{
     line-height: 1;
   }
 
+  .benefits-slider .slick-list{
+    padding-bottom: 250px;
+  }
+  .benefits-item{
+    position: relative;
+    padding-bottom: 45px;
+    cursor: pointer;
+    & .benefits-description{
+      display: none;
+      & .benefits-link a{
+        @apply text-black pb-4 block;
+        & svg{
+          margin-left: auto;
+          margin-right: auto;
+          & path{
+            @apply transition-all;
+          }
+        }
+        &:hover{
+          @apply text-pink;
+          & svg path{
+            fill: #CB9597;
+          }
+        }
+      }
+    }
+    &:hover{
+      & .benefits-description{
+        display: block;
+      }
+    }
+  }
+  
+
   .benefits-slider-prev{
     position: absolute;
-    bottom: -55px;
+    bottom: 85px;
     right: 110px;
     cursor: pointer;
     z-index: 99;
@@ -371,7 +405,7 @@ body, html{
 
   .benefits-slider-next{
     position: absolute;
-    bottom: -54px;
+    bottom: 86px;
     right: 78px;
     cursor: pointer;
     z-index: 99;
@@ -397,7 +431,7 @@ body, html{
 
 .benefits-bottom-curve{
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -405,7 +439,7 @@ body, html{
 
 .benefits-top-curve{
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -413,7 +447,7 @@ body, html{
 
 .home-slider-bottom-curve{
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -421,8 +455,66 @@ body, html{
 
 .home-slider-top-curve{
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   z-index: 1;
+}
+
+#appointment{
+  background: rgb(252 247 246);
+  padding-top: 80px;
+  position: relative;
+  z-index: 2;
+  & .container{
+    margin-top: -130px;
+  }
+}
+
+
+
+.social-buttons a{
+  & svg path.circle{
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover{
+    & svg path.circle{
+      fill: #cb9597;
+    }
+  }
+}
+
+.arrow-link{
+  display: flex;
+  align-items: center;
+  & svg{
+    margin-right: 10px;
+    & path{
+      @apply transition-all;
+    }
+    
+  }
+  &:hover{
+    & svg path{
+      fill: #CB9597;
+    }
+  }
+}
+
+.faq-item{
+  .faq-question::after{
+    content: '+';
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.open{
+    .faq-question::after{
+      content: '-';
+    }
+    .faq-question{
+      margin-bottom: 36px;
+    }
+  }
 }

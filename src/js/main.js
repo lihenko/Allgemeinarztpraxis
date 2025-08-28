@@ -192,3 +192,93 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const moreBox = document.querySelector('.bio-more-info');
+  const btn     = document.querySelector('.bio-more-button');
+
+  if (!moreBox || !btn) return;
+
+  const OPEN_TEXT  = '+  mehr erfahren';
+  const CLOSE_TEXT = '– weniger anzeigen';
+
+  // Підготовка для плавного відкривання
+  moreBox.classList.remove('hidden');
+  moreBox.style.overflow   = 'hidden';
+  moreBox.style.maxHeight  = '0px';
+  moreBox.style.transition = 'max-height 300ms ease';
+  moreBox.dataset.open = '0';
+
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('role', 'button');
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isOpen = moreBox.dataset.open === '1';
+
+    if (isOpen) {
+      // Закриваємо
+      moreBox.style.maxHeight = moreBox.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        moreBox.style.maxHeight = '0px';
+      });
+      moreBox.dataset.open = '0';
+      btn.textContent = OPEN_TEXT;
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      // Відкриваємо
+      moreBox.style.maxHeight = moreBox.scrollHeight + 'px';
+      moreBox.dataset.open = '1';
+      btn.textContent = CLOSE_TEXT;
+      btn.setAttribute('aria-expanded', 'true');
+
+      const onEnd = (ev) => {
+        if (ev.propertyName === 'max-height' && moreBox.dataset.open === '1') {
+          moreBox.style.maxHeight = '';
+          moreBox.removeEventListener('transitionend', onEnd);
+        }
+      };
+      moreBox.addEventListener('transitionend', onEnd);
+    }
+  });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    question.addEventListener("click", () => {
+      // Закриваємо всі інші
+      items.forEach(i => {
+        const ans = i.querySelector(".faq-answer");
+        if (i !== item) {
+          i.classList.remove("open");
+          ans.style.maxHeight = null;
+          ans.style.opacity = 0;
+        }
+      });
+
+      // Перемикаємо поточний
+      if (item.classList.contains("open")) {
+        item.classList.remove("open");
+        answer.style.maxHeight = null;
+        answer.style.opacity = 0;
+      } else {
+        item.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.opacity = 1;
+      }
+    });
+  });
+});
+
+
+
+
