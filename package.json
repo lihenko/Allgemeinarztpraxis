@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "locomotive-scroll": "^5.0.0-beta.21",
     "mobile-menu": "^4.0.1"
   },

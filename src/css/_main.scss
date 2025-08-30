@@ -105,6 +105,12 @@ body, html{
         @apply text-white bg-black border-black;
       }
     }
+    .transparent-btn{
+      @apply text-black bg-[rgba(255,255,255,0.4)] border-black;
+      &:hover{
+        @apply text-white bg-black border-black;
+      }
+    }
   }
 
   svg{
@@ -505,7 +511,7 @@ body, html{
   .faq-question::after{
     content: '+';
     position: absolute;
-    right: -45px;
+    right: -65px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -515,6 +521,28 @@ body, html{
     }
     .faq-question{
       margin-bottom: 36px;
+    }
+  }
+}
+
+.google-link{
+  & svg path{
+    @apply transition-all;
+  }
+  &:hover{
+    & svg path{
+      fill: #FAF67E;
+    }
+  }
+}
+
+.instagram-link{
+  & svg path{
+    @apply transition-all;
+  }
+  &:hover{
+    & svg path{
+      fill: #CB9597;
     }
   }
 }
