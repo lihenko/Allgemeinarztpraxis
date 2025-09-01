@@ -11,7 +11,7 @@ module.exports = {
       'violet': '#2E2555',
       'lightviolet' : '#AE99FF',
       'white' : '#ffffff',
-      'grey' : '#F8F8F8',
+      'grey' : '#9AB3C1',
       'darkgrey' : '#1E1E1E',
       'lightgrey' : '#F6F6F3',
       'black' : '#3F4857',

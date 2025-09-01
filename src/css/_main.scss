@@ -196,8 +196,8 @@ body, html{
       border-bottom-left-radius: 50px;
       align-items: center;
       width: 287px;
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 13px;
+      padding-bottom: 13px;
       padding-left: 29px;
       transition: all 0.3s ease-in-out;
       transform: translateX(225px);
@@ -248,6 +248,24 @@ body, html{
         opacity: 0;
         transform: translateY(50px);
         transition: all 1s ease-in-out;
+        & .slider-link{
+          margin-top: 16px;
+          font-size: 0.36em;
+          color: #fff;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          & svg path{
+            @apply transition-all;
+          }
+          &:hover{
+            @apply text-pink;
+            & svg path{
+              fill: #CB9597;
+            }
+          }
+
+        }
       }
       &.slick-active{
         & .slide-data{
@@ -393,9 +411,27 @@ body, html{
         }
       }
     }
+    & .benefits-icon{
+        background-color: #fff;
+        & .hover-icon{
+          display: none;
+        }
+        & .main-icon{
+          display: block;
+      }
+    }
     &:hover{
       & .benefits-description{
         display: block;
+      }
+      & .benefits-icon{
+        background-color: #E0C5C6;
+        & .hover-icon{
+          display: block;
+        }
+        & .main-icon{
+          display: none;
+        }
       }
     }
   }

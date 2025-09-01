@@ -78,6 +78,57 @@ $gold : #AD954F;
       margin-top: 80px;
     }
       
+  }
+  .home-slider{
+    & .slide-item{
+      &.slide-1 .slide-data{
+        max-width: 784px;
+        margin-left: auto;
+        bottom: 80px;
+      }
+      &.slide-2 .slide-data{
+        max-width: 621px;
+        margin-left: auto;
+        bottom: 80px;
+      }
+      &.slide-3 .slide-data{
+        max-width: 659px;
+        margin-right: auto;
+        bottom: 80px;
+      }
+      &.slide-4 .slide-data{
+        max-width: 571px;
+        margin-left: auto;
+        bottom: 80px;
+      }
+      &.slide-5 .slide-data{
+        max-width: 639px;
+        margin-right: auto;
+        bottom: 80px;
+      }
+      &.slide-6 .slide-data{
+        max-width: 639px;
+        margin-right: auto;
+        bottom: 80px;
+      }
+      &.slide-7 .slide-data{
+        max-width: 639px;
+        margin-right: auto;
+        bottom: 80px;
+      }
+      &.slide-8 .slide-data{
+        max-width: 639px;
+        margin-right: auto;
+        bottom: 80px;
+      }
+    }
+  }
+  #buttons{
+    & .sprechstunden{
+
+      padding-top: 18px;
+      padding-bottom: 18px;
+     }
   } 
 }
 
