@@ -87,6 +87,36 @@ jQuery('.benefits-slider').slick({
   ],
 });
 
+jQuery('.contact-slider').slick({
+  autoplay: true,
+  slidesToScroll: 1,
+  slidesToShow: 3,
+  arrows: true,
+  dots: true,
+  infinite: true,
+  speed: 800,
+  autoplaySpeed: 4000,
+  prevArrow: jQuery('.contact-slider-prev'),
+  nextArrow: jQuery('.contact-slider-next'),
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+      },
+    },
+  ],
+});
+
 
 // Scroll to top
 let mybutton = document.getElementById("btn-back-to-top");
