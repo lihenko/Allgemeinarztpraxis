@@ -30,15 +30,19 @@ jQuery('.line-wrap').slick({
     pauseOnHover: false
   });
 
-jQuery('.benefits-slider').slick({
-  autoplay: true,
+
+jQuery(document).ready(function () {
+  const slider = jQuery('.benefits-slider');
+
+  // ініціалізація slick
+  slider.slick({
+    autoplay: false,
   slidesToScroll: 1,
   slidesToShow: 9,
   arrows: true,
   dots: false,
   infinite: true,
   speed: 800,
-  autoplaySpeed: 4000,
   prevArrow: jQuery('.benefits-slider-prev'),
   nextArrow: jQuery('.benefits-slider-next'),
   responsive: [
@@ -85,6 +89,24 @@ jQuery('.benefits-slider').slick({
       },
     },
   ],
+});
+
+  let scrolledOnce = false; // прапорець, щоб не повторювати автопрокрутку
+
+  // IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !scrolledOnce) {
+        slider.slick('slickNext');
+        scrolledOnce = true; // тільки один раз
+      }
+    });
+  }, { threshold: 0.5 }); // коли видно мінімум 50% слайдера
+
+  const sliderEl = document.querySelector('.benefits-slider');
+  if (sliderEl) {
+    observer.observe(sliderEl);
+  }
 });
 
 jQuery('.contact-slider').slick({
@@ -195,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Додаємо items-end після завершення анімації
         const onClose = (ev) => {
           if (ev.propertyName === 'max-height' && more.dataset.open === '0') {
-            flexWrap.classList.add('items-end');
+            //flexWrap.classList.add('items-end');
             more.removeEventListener('transitionend', onClose);
           }
         };
@@ -209,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('aria-expanded', 'true');
 
         // Одразу прибираємо items-end
-        flexWrap.classList.remove('items-end');
+        //flexWrap.classList.remove('items-end');
 
         const onOpen = (ev) => {
           if (ev.propertyName === 'max-height' && more.dataset.open === '1') {
@@ -284,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const question = item.querySelector(".faq-question");
     const answer = item.querySelector(".faq-answer");
 
-    question.addEventListener("click", () => {
+    function toggleItem() {
       // Закриваємо всі інші
       items.forEach(i => {
         const ans = i.querySelector(".faq-answer");
@@ -305,9 +327,15 @@ document.addEventListener("DOMContentLoaded", function () {
         answer.style.maxHeight = answer.scrollHeight + "px";
         answer.style.opacity = 1;
       }
-    });
+    }
+
+    // Відкривати і по кліку, і по наведенню
+    question.addEventListener("click", toggleItem);
+    question.addEventListener("mouseover", toggleItem);
+    item.addEventListener("mouseleave", toggleItem);
   });
 });
+
 
 
 
