@@ -337,7 +337,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("scroll", function () {
+  const header = document.getElementById("fixed-header");
+  if (!header) return; // якщо елементу немає
 
+  if (window.scrollY > 300) {
+    header.classList.add("fixed");
+  } else {
+    header.classList.remove("fixed");
+  }
+});
 
 
 AOS.init({

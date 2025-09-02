@@ -90,6 +90,20 @@ $gold : #AD954F;
   .contact-slider-next{
     bottom: 86px;
   }
+  #fixed-header{
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100%;
+    transition: all 0.8 ease-in-out;
+    background-color: #fff;
+    z-index: 99999;
+  }
+
+  #fixed-header.fixed{
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 1200px){
