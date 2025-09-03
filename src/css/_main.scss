@@ -206,8 +206,8 @@ body, html{
         transition: all 0.8s ease-in-out;
       }
       & .buttons-data{
-        font-size: 8px;
-        line-height: 14px;
+        font-size: 10px;
+        line-height: 18px;
         height: 0;
         overflow: hidden;
         //transition: all 0.8s ease-in-out;
@@ -230,10 +230,13 @@ body, html{
       }
       &:hover{
         transform: translateX(0);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom-right-radius: 50px;
         & .buttons-data{
           height: auto;
           padding-top: 25px;
-          padding-left: 45px;
+          padding-left: 35px;
           padding-right: 15px;
         }
         & .buttons-icon{

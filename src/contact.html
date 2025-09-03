@@ -59,7 +59,7 @@
               <li >
                 <a href="#">Services</a>
               </li>
-              <li >
+              <li class="current-menu-item">
                 <a href="#">Kontakt</a>
               </li>
             </ul>
@@ -77,8 +77,8 @@
       </section>
       <section id="contact-cards" class="py-16">
         <div class="container xl:-mt-24">
-            <div class="flex flex-wrap">
-                <div class="w-full lg:w-1/3 mb-6">
+            <div class="flex flex-wrap -mx-[1px]">
+                <div class="w-full lg:w-1/3 mb-6 px-[1px]">
                     <div class="contact-card p-9 rounded-2xl bg-white relative pb-28  h-full" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex -mx-3 justify-between items-center mb-7">
                             <h4 class="font-light px-3">In dringenden Fällen</h4>
@@ -91,12 +91,12 @@
                             Außerhalb der Sprechzeiten kontaktieren Sie bitte den ärztlichen Bereitschaftsdienst unter Tel. 116-117.
                         </div>
                         <div class="absolute left-9 right-9 bottom-9">
-                            <a href="#" class="w-full btn outline-btn">09141 - 5075</a>
+                            <a href="#" class="w-full btn outline-btn lg:text-xs py-[10px] rounded-full">09141 - 5075</a>
                         </div>
                     </div>
                     
                 </div>
-                <div class="w-full lg:w-1/3 mb-6">
+                <div class="w-full lg:w-1/3 mb-6 px-[1px]">
                     <div class="contact-card p-9 rounded-2xl bg-white relative pb-28  h-full" data-aos="fade-up" data-aos-delay="500">
                         <div class="flex -mx-3 justify-between items-center mb-7">
                             <h4 class="font-light px-3">Termine</h4>
@@ -108,12 +108,12 @@
                             Wir bieten Ihnen das volle Allgemeinmedizinische Spektrum ...
                         </div>
                         <div class="absolute left-9 right-9 bottom-9">
-                            <a href="#" class="w-full btn outline-btn hover:bg-pink hover:border-pink">Online Termin vereinbaren</a>
+                            <a href="#" class="w-full btn outline-btn hover:bg-pink hover:border-pink lg:text-xs py-[10px] rounded-full">Online Termin vereinbaren</a>
                         </div>
                     </div>
                     
                 </div>
-                <div class="w-full lg:w-1/3 mb-6">
+                <div class="w-full lg:w-1/3 mb-6 px-[1px]">
                     <div class="contact-card p-9 rounded-2xl bg-white relative pb-9  h-full" data-aos="fade-up" data-aos-delay="700">
                         <div class="flex -mx-3 justify-between items-center mb-7">
                             <h4 class="font-light px-3">Sprechzeiten</h4>
@@ -231,7 +231,7 @@
     <footer class="bg-black text-white py-10 lg:py-16">
       <div class="container">
         <div class="footer-logo mb-20">
-            <a href="/"><img src="./img/Logo White.svg" alt="logo" class="h-10 lg:h-12"></a> 
+            <a href="/"><img src="./img/Logo White.svg" alt="logo"></a> 
         </div>
         <div class="flex flex-wrap mb-10 -mx-3">
           <div class="w-full px-3 lg:w-1/2 xl:w-1/4 mb-6">
@@ -339,25 +339,31 @@
         <div class="buttons-icon"><img src="./img/sprechstunden.svg" alt="rezept-bestellen"></div>
         <div class="buttons-data">
           <div class="font-semibold">Sprechstunden:</div> 
-          <div class="mb-2">Mo. - Fr. von 9 - 12 Uhr & 16 - 18 Uhr</div>
-          <ul class="list-disc mb-2">
-            <li>Nur nach vorheriger Terminvereinbarung.</li>
-            <li>Sprechstundenzeiten sind unverbindlich und können abweichen</li>
-          </ul>
+          <div class="flex -mx-3">
+            <div class="px-3">
+              <div>Mo, Di, Do:</div>   
+              <div>Mi, Fr:</div>
+            </div>
+            <div class="px-3">
+              <div>8 - 12 Uhr & 13 - 17 Uhr</div>
+              <div>8 - 12 Uhr</div> 
+            </div>
+          </div>
+          <div class="mb-6">Nur nach vorheriger Terminvereinbarung.</div>
           
           <div class="font-semibold">Im Notfall:</div>
-           <ul class="list-disc mb-2">
+           <ul class="list-disc mb-2 ml-4">
             <li>Außerhalb unserer Sprechzeiten erreichen Sie den ärztlichen Bereitschaftsdienst unter der bundesweiten Rufnummer:<br>
-              <a href="tel:116117" class="inline-block">
+              <a href="tel:116117" class="inline-block font-medium">
                 <svg width="6" height="6" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.09943 15.8892L0.548296 14.3381L12.0824 2.78409L3.1733 2.78409L3.19318 0.636363L15.7812 0.636363L15.7812 13.2443H13.6136L13.6335 4.33523L2.09943 15.8892Z" />
                 </svg>
                 <span>116 117</span>
               </a><br> Oder online unter:<br>
-              <a href="https://www.116117.de" target="_blank">www.116117.de</a>
+              <a href="https://www.116117.de" target="_blank" class="font-medium">www.116117.de</a>
               </li>
             <li>Bei lebensbedrohlichen Notfällen wählen Sie bitte immer den Notruf:<br>
-              <a href="tel:112">
+              <a href="tel:112" class="font-medium">
                 <svg width="6" height="6" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.09943 15.8892L0.548296 14.3381L12.0824 2.78409L3.1733 2.78409L3.19318 0.636363L15.7812 0.636363L15.7812 13.2443H13.6136L13.6335 4.33523L2.09943 15.8892Z"/>
                 </svg>

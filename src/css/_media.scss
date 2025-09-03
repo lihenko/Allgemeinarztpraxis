@@ -81,6 +81,9 @@ $gold : #AD954F;
         font-weight: 500;
         @apply text-black hover:text-pink;
       }
+      &.current-menu-item a{
+        @apply text-pink;
+      }
     }
   }
   .contact-slider-prev{
