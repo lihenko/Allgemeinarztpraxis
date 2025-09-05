@@ -133,7 +133,8 @@ body, html{
     z-index: 50;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(225px);
+    transition: all 0.8s ease-in-out;
     & .termin-buchen{
       display: flex;
       background-color: #3F4857;
@@ -146,7 +147,6 @@ body, html{
       padding-left: 29px;
       margin-bottom: 4px;
       transition: all 0.8s ease-in-out;
-      transform: translateX(225px);
       & .buttons-icon{
         width: 44px;
       }
@@ -158,7 +158,7 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(0);
+        transform: translateX(-225px);
       }
     }
     & .rezept-bestellen{
@@ -173,7 +173,6 @@ body, html{
       padding-left: 29px;
       margin-bottom: 4px;
       transition: all 0.8s ease-in-out;
-      transform: translateX(225px);
       & .buttons-icon{
         width: 44px;
       }
@@ -185,7 +184,7 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(0);
+        transform: translateX(-225px);
       }
     }
     & .sprechstunden{
@@ -200,7 +199,6 @@ body, html{
       padding-bottom: 13px;
       padding-left: 29px;
       transition: all 0.8s ease-in-out;
-      transform: translateX(225px);
       & .buttons-icon{
         width: 44px;
         transition: all 0.8s ease-in-out;
@@ -229,7 +227,7 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(0);
+        transform: translateX(-225px);
         padding-top: 40px;
         padding-bottom: 40px;
         border-bottom-right-radius: 50px;
@@ -718,4 +716,56 @@ body, html{
 
 #fixed-header{
   display: none;
+}
+
+
+#content{
+  a{
+    @apply text-black underline hover:text-pink;
+  }
+  ul{
+    margin-bottom: 1.5em;
+    list-style: disc;
+    list-style-position: inside;
+  }
+  strong{
+    @apply font-medium;
+  }
+  &.datenschutz{
+    & h2{
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 45px;
+      @apply text-[#99B4BE];
+    }
+    & p{
+      line-height: 24px;
+      font-size: 10px;
+      & strong{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+    & ul{
+      font-size: 10px;
+      margin-left: 16px;
+    }
+  } 
+}
+
+#page-navigation{
+  position: relative;
+  & a{
+    line-height: 13px;
+    font-size: 16px;
+    @apply text-black hover:text-pink;
+    & svg path{
+      @apply transition-all;
+    }
+    &:hover svg path{
+      @apply fill-pink;
+    }
+  }
+  
 }
