@@ -27,6 +27,7 @@ module.exports = {
     },
     fontFamily: {
       'poppins': ['Poppins', 'sans-serif'],
+      'opensans': ['OpenSans', 'sans-serif'],
       'body': ['Poppins', 'sans-serif'],
       'title': ['Poppins', 'sans-serif'],
     },
@@ -34,9 +35,9 @@ module.exports = {
       xs: ['12px', '18px'],
       sm: ['14px', '24px'],
       base: ['16px', '26px'],
-      lg: ['18px', '28px'],
-      xl: ['20px', '30px'],
-      xxl: ['22px', '32px'],
+      lg: ['18px', '30px'],
+      xl: ['20px', '32px'],
+      xxl: ['22px', '34px'],
     },
     screens: {
       'xs': '480px',

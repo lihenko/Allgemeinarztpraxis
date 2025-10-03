@@ -25,7 +25,7 @@ body, html{
 
 @layer components {
     body{
-        @apply text-black text-xs sm:text-base leading-normal lg:text-lg  xxl:text-xxl font-body;
+        @apply text-black text-xs sm:text-base leading-normal lg:text-lg font-body;
     }
     h1, .h1{
         @apply text-[48px] lg:text-[56px] xl:text-[64px] xxl:text-[82px] leading-[1.1] font-title font-bold;
@@ -43,42 +43,31 @@ body, html{
         @apply text-[16px] lg:text-[18px] xl:text-[24px] leading-[1.1] font-title;
     }
     p{
-        @apply mb-3 sm:mb-6;
+        @apply mb-3;
     }
     .container{
         @apply mx-auto px-3 lg:px-4;
     }
 
-    input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], input[type=password]{
-      @apply font-body text-base text-violet border border-[#4990C0];
+    input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], input[type=date]{
+      @apply font-body text-base text-black rounded-[7px] bg-[#f7f7f7] placeholder:text-[rgba(63,72,87,.4)];
       width: 100%;
-      padding: 12px 23px;
+      padding: 11px 23px;
     }
-    input[type=tel]{
-        direction: ltr;
-        text-align: right;
-     }
 
     input:focus{
       outline:none!important;
-      border-color: #2E2554;
-    }
-    input::placeholder{
-        @apply text-violet font-body;
     }
 
    textarea{
-      @apply font-body text-base text-violet border border-[#4990C0];
+      @apply font-body text-base text-black rounded-[7px] bg-[#f7f7f7] placeholder:text-[rgba(63,72,87,.4)];
       width: 100%;
-      height: 153px;
-      padding: 12px 23px;
+      height: 138px;
+      padding: 11px 23px;
     }
     textarea:focus{
         outline:none!important;
         border-color: #2E2554;
-    }
-    textarea::placeholder{
-      @apply text-violet font-body;
     }
 
     a{
@@ -111,6 +100,12 @@ body, html{
         @apply text-white bg-black border-black;
       }
     }
+
+    input[type=submit]{
+      @extend .btn;
+      @extend .black-btn;
+      @apply text-base block w-full px-3 py-[10px] rounded-full;
+    }
   }
 
   svg{
@@ -133,20 +128,20 @@ body, html{
     z-index: 50;
     top: 50%;
     right: 0;
-    transform: translateY(-50%) translateX(225px);
-    transition: all 0.8s ease-in-out;
+    transform: translateY(-50%) translateX(235px);
+    transition: all 0.2s ease-in-out;
     & .termin-buchen{
       display: flex;
       background-color: #3F4857;
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
       align-items: center;
-      width: 287px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      padding-left: 29px;
+      width: 300px;
+      padding-top: 10.5px;
+      padding-bottom: 10.5px;
+      padding-left: 18px;
       margin-bottom: 4px;
-      transition: all 0.8s ease-in-out;
+      transition: all 0.2s ease-in-out;
       & .buttons-icon{
         width: 44px;
       }
@@ -158,7 +153,7 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(-225px);
+        transform: translateX(-235px);
       }
     }
     & .rezept-bestellen{
@@ -167,12 +162,12 @@ body, html{
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
       align-items: center;
-      width: 287px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      padding-left: 29px;
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 18px;
       margin-bottom: 4px;
-      transition: all 0.8s ease-in-out;
+      transition: all 0.2s ease-in-out;
       & .buttons-icon{
         width: 44px;
       }
@@ -184,7 +179,7 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(-225px);
+        transform: translateX(-235px);
       }
     }
     & .sprechstunden{
@@ -194,17 +189,17 @@ body, html{
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
       align-items: center;
-      width: 287px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      padding-left: 29px;
-      transition: all 0.8s ease-in-out;
+      width: 300px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 18px;
+      transition: all 0.2s ease-in-out;
       & .buttons-icon{
         width: 44px;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
       & .buttons-data{
-        font-size: 10px;
+        font-size: 11px;
         line-height: 18px;
         height: 0;
         overflow: hidden;
@@ -227,14 +222,15 @@ body, html{
         }
       }
       &:hover{
-        transform: translateX(-225px);
-        padding-top: 40px;
-        padding-bottom: 40px;
+        transform: translateX(-235px);
+        padding-top: 15px;
+        padding-bottom: 15px;
         border-bottom-right-radius: 50px;
+        padding-right: 18px;
         & .buttons-data{
           height: auto;
-          padding-top: 25px;
-          padding-left: 35px;
+          padding-top: 15px;
+          padding-left: 0;
           padding-right: 15px;
         }
         & .buttons-icon{
@@ -262,7 +258,7 @@ body, html{
         color: #fff;
         font-size: 28px;
         line-height: 1.15;
-        font-weight: 200;
+        font-weight: 100;
         letter-spacing: -0.02em;
         opacity: 0;
         transition: all 1s ease-in-out;
@@ -464,15 +460,12 @@ body, html{
     }
   }
 
-  #benefits{
-    background-color: rgba(239, 216, 212, 0.5);
-  }
 
   .benefits-icon{
     width: 152px;
     height: 139px;
     border-radius: 20px;
-    box-shadow: 0px 5px 4px 0px rgba(229, 218, 219, 1);
+    box-shadow: 0px 1px 3px 0px rgba(63, 72, 87, 0.15),0px 3px 6px 0px rgba(229, 218, 219, 1);
     background: #fff;
     display: flex;
     align-items: center;
@@ -485,14 +478,19 @@ body, html{
   }
 
   .benefits-slider .slick-list{
-    padding-bottom: 250px;
+    padding-bottom: 150px;
   }
   .benefits-item{
     position: relative;
     padding-bottom: 45px;
     cursor: pointer;
     & .benefits-description{
-      display: none;
+      opacity: 0;
+      transition: all 500ms ease-in-out;
+      & .benefits-link{
+        opacity: 0;
+        transition: all 500ms ease-in-out 300ms;
+      }
       & .benefits-link a{
         @apply text-black pb-4 block;
         & svg{
@@ -511,7 +509,7 @@ body, html{
       }
     }
     & .benefits-icon{
-        background-color: #fff;
+        background-color: rgba(255,255,255,0.7);
         & .hover-icon{
           display: none;
         }
@@ -521,7 +519,10 @@ body, html{
     }
     &:hover{
       & .benefits-description{
-        display: block;
+        opacity: 1;
+        & .benefits-link{
+          opacity: 1;
+        }
       }
       & .benefits-icon{
         background-color: #E0C5C6;
@@ -604,14 +605,32 @@ body, html{
 
 #appointment{
   background: rgb(252 247 246);
-  padding-top: 80px;
+  padding-top: 50px;
   position: relative;
   z-index: 2;
   & .container{
     margin-top: -130px;
   }
+  & .eresept-img{
+    position: absolute;
+    top: 80px;
+    left: 16%;
+  }
+  & .Terminbuchung-img{
+    position: absolute;
+    bottom: -50px;
+    right: -30px;
+  }
 }
 
+
+.appointment-top-curve{
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
 
 
 .social-buttons a{
@@ -643,19 +662,19 @@ body, html{
 }
 
 .faq-item{
-  .faq-question::after{
+  & .faq-question::after{
     content: '+';
     position: absolute;
     right: -65px;
     top: 50%;
     transform: translateY(-50%);
   }
+  & .faq-answer p:first-child{
+    padding-top: 36px;
+  }
   &.open{
-    .faq-question::after{
+    & .faq-question::after{
       content: '-';
-    }
-    .faq-question{
-      margin-bottom: 36px;
     }
   }
 }
@@ -735,7 +754,8 @@ body, html{
     & h2{
       font-size: 22px;
       font-weight: 300;
-      margin-bottom: 45px;
+      margin-bottom: 25px;
+      margin-top: 45px;
       @apply text-[#99B4BE];
     }
     & p{
@@ -750,6 +770,9 @@ body, html{
     & ul{
       font-size: 10px;
       margin-left: 16px;
+      & li ul{
+        list-style: none;
+      }
     }
   } 
 }
@@ -768,4 +791,102 @@ body, html{
     }
   }
   
+}
+
+
+.eresept-img {
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  will-change: transform, opacity;
+}
+
+.eresept-img.zoom-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* переважні стилі для картинок які рухаються */
+.Rezeptbestellung-img,
+.Terminbuchung-img {
+  transition: transform 0.12s linear;
+  will-change: transform;
+}
+
+
+.wpcf7-acceptance{
+  padding: 24px;
+  border-radius: 7px;
+  background-color: #f7f7f7;
+  display: block;
+}
+
+/* контейнер */
+.wpcf7-acceptance .wpcf7-list-item { display:block; }
+
+/* label: робимо його клікабельним і вирівнюємо */
+.wpcf7-acceptance label {
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* input — візуально схований, але доступний для клавіатури */
+.wpcf7-acceptance input[type="checkbox"]{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;          /* НЕ display:none */
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* текст/спан поруч — тут малюємо кастомну "коробку" через ::before */
+.wpcf7-acceptance .wpcf7-list-item-label{
+  position: relative;
+  display: inline-block;
+  padding-left: 42px; /* відступ щоб помістити коробку */
+  line-height: 1.2;
+  & a{
+    text-decoration: none!important;
+  }
+}
+
+/* сама коробка */
+.wpcf7-acceptance .wpcf7-list-item-label::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #3F4857;
+  border-radius: 4px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* стан checked — змінюємо фон і додаємо галочку через ::after */
+.wpcf7-acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label::before{
+  background: #3F4857;
+  border-color: #3F4857;
+}
+
+.wpcf7-acceptance input[type="checkbox"]:checked + .wpcf7-list-item-label::after{
+  content: "✔";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+}
+
+/* видимий фокус для доступності */
+.wpcf7-acceptance input[type="checkbox"]:focus + .wpcf7-list-item-label::before{
+  box-shadow: 0 0 0 3px rgba(0,115,170,0.12);
 }

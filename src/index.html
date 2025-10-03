@@ -74,7 +74,7 @@
     <header class="py-4 border-t-[6px] border-yellow">
       <div class="container">
         <div class="flex items-center justify-between">
-          <div class="brand w-2/3 lg:w-1/4">
+          <div class="brand w-2/3 lg:w-1/4 xl:w-1/3">
             <a href="/">
               <picture>
                 <img src="./img/logo.svg" alt="Logo">
@@ -98,27 +98,30 @@
             </ul>
           </div>
           <div class="buttons hidden w-1/3 lg:flex justify-end gap-4">
-            <a href="#" class="btn black-btn">Termin vereinbaren</a>
-            <a href="#" class="btn outline-btn">Rezept bestellen</a>
+            <a href="#" class="btn black-btn terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Termin vereinbaren</a>
+            <a href="/rezeptbestellung" class="btn outline-btn">Rezept bestellen</a>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section id="home-hero" class="py-16 relative">
-        <div class="container">
+      <section id="home-hero" class="py-16 relative lg:py-2">
+        <div class="container lg:flex lg:flex-col lg:justify-center lg:h-full">
           <div class="flex flex-wrap -mx-3 items-center">
             <div class="px-3 w-full lg:w-1/2 mb-6 lg:mb-0" data-aos="fade-right" data-aos-delay="700">
               <img src="./img/hero-img.webp" alt="hero image">
             </div>
             <div class="px-3 w-full lg:w-1/2 text-center">
-              <h1 class="font-light mb-6" data-aos="fade-left" data-aos-delay="300">Gesund.<br>Ganzheitlich.<br>Gut betreut.</h1>
+              <h1 class="font-thin mb-6" data-aos="fade-left" data-aos-delay="300">Gesund.<br>Ganzheitlich.<br>Gut betreut.</h1>
               <div class="max-w-[484px] mx-auto mb-8" data-aos="fade-left" data-aos-delay="500">
                 Ihre Hausärztin für Prävention, Sportmedizin & Naturheilkunde in Weißenburg
               </div>
-              <div class="hero-buttons flex flex-wrap justify-center gap-4" data-aos="fade-left" data-aos-delay="700">
-                <a href="#" class="btn black-btn">Termin vereinbaren</a>
-                <a href="#" class="btn outline-btn">Rezept bestellen</a>
+              <div class="hero-buttons flex flex-wrap justify-center gap-4">
+                <a href="https://webtermin.medatixx.de/#/4556e4df-bedd-45c0-a862-2f31a1db26a9" target="_blank" class="btn black-btn" data-aos="fade-left" data-aos-delay="700">Termin vereinbaren</a>
+                <a href="#" class="btn outline-btn" data-aos="fade-left" data-aos-delay="900">Rezept bestellen</a>
+              </div>
+              <div class="hero-note text-center text-[7px]" data-aos="fade-in" data-aos-delay="1200">
+                *Terminservice von medatixx – öffnet in neuem Tab
               </div>
             </div>
           </div>
@@ -130,34 +133,26 @@
           <img src="./img/right-decoration.svg" alt="decor">
         </div>
       </section>
-      <section id="running-line" class="bg-[#EFD8D4] py-4 px-3 relative">
+      <section id="running-line" class="bg-[#F3E8E5] py-4 px-3 relative">
         <div class="line-wrap">
           <div class="line">
             <div class=" flex h-full items-center">
+              <div class="text-[13.5px] font-semibold px-3">Aktuelles</div>
               <div class="px-3"><img src="./img/smile.svg" alt="smile" class="w-[20px] h-[20px]"></div>
-              <div class="text-[13.5px] font-semibold px-3">Aktuelles 1</div>
-              <div class="px-3 text-[13.5px] font-light">Unsere Praxis bleibt an folgenden Daten geschlossen: 12. Juli  |  19. Juli  |  26. Juli  |  2. August  2025. Vielen Dank für Ihr Verständnis. Ihr Praxisteam Scheel.</div>
+              <div class="px-3 text-[13.5px] font-light">Unsere Praxis ist an folgenden Tagen geschlossen: [Datum] - [Datum] 2025.  Die Vertretung übernimmt die Allgemeinarztpraxis Dr. [Name], [Straße, Ort], Tel. [Telefon].</div>
             </div>
           </div>
           <div class="line">
             <div class="flex h-full items-center">
               <div class="px-3"><img src="./img/smile.svg" alt="smile" class="w-[20px] h-[20px]"></div>
-              <div class="text-[13.5px] font-semibold px-3">Aktuelles 2</div>
-              <div class="px-3 text-[13.5px] font-light">Unsere Praxis bleibt an folgenden Daten geschlossen: 12. Juli  |  19. Juli  |  26. Juli  |  2. August  2025. Vielen Dank für Ihr Verständnis. Ihr Praxisteam Scheel.</div>
-            </div>
-          </div>
-          <div class="line">
-            <div class="flex h-full items-center">
-              <div class="px-3"><img src="./img/smile.svg" alt="smile" class="w-[20px] h-[20px]"></div>
-              <div class="text-[13.5px] font-semibold px-3">Aktuelles 3</div>
-              <div class="px-3 text-[13.5px] font-light">Unsere Praxis bleibt an folgenden Daten geschlossen: 12. Juli  |  19. Juli  |  26. Juli  |  2. August  2025. Vielen Dank für Ihr Verständnis. Ihr Praxisteam Scheel.</div>
+              <div class="px-3 text-[13.5px] font-light">Bei akuten Beschwerden wenden Sie sich bitte an den ärztlichen Bereitschaftsdienst 116 117; in lebensbedrohlichen Notfällen wählen Sie 112.</div>
             </div>
           </div>
         </div>
       </section>
       <section id="about-us" class="py-16 lg:py-24">
         <div class="container">
-          <div class="text-lg xxl:text-[42px] xxl:leading-normal font-light">
+          <div class="text-lg xxl:text-[38px] xxl:leading-[52px] font-light xxl:pr-44">
             <p data-aos="fade-up" data-aos-delay="300"><i>Willkommen in der hausärztlichen Praxis Dr. med. Friederike Scheel</i><span class="font-extralight"> – Ihrer neuen Adresse für moderne Allgemeinmedizin mit Herz und Verstand. Ob </span><i>Vorsorge, akute Beschwerden oder ganzheitliche Begleitung:</i> <span class="font-extralight">Wir glauben, dass gute Medizin mit Aufmerksamkeit beginnt – und mit einem offenen Ohr. Wir sind für Sie da – persönlich und  kompetent.</span></p> 
             <p data-aos="fade-up" data-aos-delay="500"><span class="font-extralight">In einem modernen Praxisumfeld mit digitaler Infrastruktur und einem empathischen und motivierten Team möchten wir, dass Sie sich jederzeit gut begleitet fühlen.</span> <i>Wir freuen uns auf Sie.</i></p>
             <p data-aos="fade-up" data-aos-delay="700"><span class="font-extralight">Herzlichst,<br>Ihr Praxisteam der Allgemeinarztpraxis Dr. Friederike Scheel</span></p>
@@ -258,25 +253,29 @@
         <div class="home-slider-prev"><img src="./img/slider-left-arrow.svg" alt="arrow"></div>
         <div class="home-slider-next"><img src="./img/slider-right-arrow.svg" alt="arrow"></div>
       </section>
-      <section id="services" class="py-16 lg:py-24">
+      <section id="services" class="py-16 lg:py-24 xxl:pt-44">
         <div class="container">
-          <h2 class="font-light text-[28px] lg:text-[38px] xxl:text-[42px] leading-normal tracking-tight">Unsere Leistungen</h2>
-          <div class="xxl:text-[21px] font-light tracking-tight">– moderne Allgemeinmedizin & individuelle Betreuung</div>
+          <h2 class="font-light text-[28px] leading-normal lg:text-[38px] lg:leading-[52px] tracking-tight">Unsere Leistungen</h2>
+          <div class="text-[13px] lg:text-[15px] lg:leading-[25px] font-opensans tracking-tight">– moderne Allgemeinmedizin & individuelle Betreuung</div>
           <div class="services flex flex-wrap -mx-3 py-16">
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Sportmedizin.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Sportmedizin</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Gezielte Diagnostik & Therapie für Bewegungsfreude – ob Freizeit oder Leistungssport. Wir begleiten Sie aktiv und individuell.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Sportmedizin</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Gezielte Diagnostik & Therapie für Bewegungsfreude – ob Freizeit oder Leistungssport. Wir begleiten Sie aktiv und individuell.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Sportmedizin bedeutet mehr als die Behandlung akuter Verletzungen – sie unterstützt auch dabei, Fehlbelastungen vorzubeugen, Trainingsziele gesund zu erreichen und die Freude an Bewegung langfristig zu erhalten. Besonders nach Verletzungen oder Operationen begleiten wir Sie mit gezielter Rehabilitation Schritt für Schritt zurück in Alltag oder Sport.</p>
+
+                      <p>Buchen Sie jetzt bequem <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">online einen Termin</span> – wir freuen uns auf Sie.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -284,36 +283,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Ultraschall Diagnostik.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Ultraschall & Diagnostik</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Moderne Bildgebung für schnelle, klare Antworten – direkt bei uns in der Praxis, ohne Wartezeit.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      <p>Was wir mit Ultraschall abklären</p>
-                      <ul>
-                        <li>Bauchorgane (Leber, Gallenblase, Nieren, Milz, Bauchspeicheldrüse)</li>
-                        <li>Schilddrüse und Halsweichteile</li>
-                        <li>Gefäße (z. B. Beinvenen, Halsarterien) – inkl. Flussdarstellung (Doppler)</li>
-                        <li>Muskeln, Sehnen, Gelenke und Weichteile</li>
-                      </ul>
-                      
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Ultraschall & Diagnostik</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Moderne Bildgebung für schnelle, klare Antworten – direkt bei uns in der Praxis, ohne lange Wartezeiten.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Ultraschall ist ein schonendes und präzises Verfahren, mit dem wir Veränderungen an Organen, Gefäßen, Muskeln oder Gelenken sichtbar machen können – ganz ohne Strahlenbelastung. So lassen sich viele Beschwerden schnell abklären und die richtige Behandlung zeitnah einleiten.</p>
 
-                      <p>So läuft die Untersuchung ab Sie liegen entspannt auf der Liege; ein Kontaktgel sorgt für optimale Bildqualität. Mit dem Schallkopf fahren wir sanft über die zu untersuchende Region. Der Ultraschall ist strahlungsfrei, in der Regel schmerzlos und dauert je nach Fragestellung etwa 10–20 Minuten.</p>
-
-                      <p>Ihre Vorteile</p>
-                      <ul>
-                        <li>Sofortige Beurteilung und direkte Besprechung der Befunde</li>
-                        <li>Keine Röntgenstrahlung, deshalb auch für häufige Verlaufskontrollen geeignet</li>
-                        <li>Hohe Aussagekraft bei vielen Fragestellungen in Echtzeit</li>
-                      </ul>
-                      
-                      <p>Jetzt Termin sichern Sie möchten eine Ultraschalluntersuchung bei uns durchführen lassen? Buchen Sie Ihren Termin direkt online – schnell, bequem und rund um die Uhr.</p>
+                      <p>Buchen Sie dafür einfach und bequem einen <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Termin online</span>.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]"  data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -321,18 +306,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10" >
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Naturheilkunde Akupunktur.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Naturheilkunde & Akupunktur</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Sanfte Medizin, die den ganzen Menschen sieht. Für mehr Balance, weniger Beschwerden – natürlich wirksam.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Naturheilkunde & Akupunktur</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Sanfte Medizin, die den ganzen Menschen sieht. Für mehr Balance, weniger Beschwerden – natürlich wirksam.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Naturheilkunde und Akupunktur können klassische Therapien sinnvoll ergänzen. Sie fördern die Selbstheilungskräfte, lösen Blockaden und tragen dazu bei, Körper und Geist ins Gleichgewicht zu bringen. Ob bei chronischen Beschwerden, Schmerzen oder zur allgemeinen Stärkung – wir setzen auf bewährte Methoden, die individuell auf Ihre Situation abgestimmt werden.</p>
+
+                      <p>Buchen Sie einfach einen <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Termin online</span> und lassen Sie sich persönlich beraten.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]"  data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -340,18 +329,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Palliativmedizin mit Herz.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Palliativmedizin mit Herz</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Medizinische Begleitung mit Würde, Zeit und Menschlichkeit – in allen Phasen des Lebens.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Palliativmedizin mit Herz</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Medizinische Begleitung mit Würde, Zeit und Menschlichkeit – in allen Phasen des Lebens.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Die Begleitung von Menschen in dieser Lebensphase ist Dr. Friederike Scheel ein besonderes Anliegen. In der Palliativmedizin geht es nicht nur um die Behandlung von Symptomen, sondern um ein würdevolles, selbstbestimmtes Leben trotz schwerer Erkrankung. Wir nehmen uns Zeit, hören zu und begleiten Patient:innen sowie Angehörige mit Empathie und Fachkompetenz. Dabei stehen Schmerztherapie, Linderung von Beschwerden und die Stärkung der Lebensqualität im Vordergrund.</p>
+
+                      <p>Für ein vertrauensvolles Gespräch und eine einfühlsame Beratung können Sie gerne <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">einen Termin vereinbaren</span>.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -359,18 +352,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Psychosomatische Grundversorgung.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Psychosomatische Grundversorgung</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Wenn Körper & Seele aus dem Gleichgewicht geraten – wir hören zu und helfen weiter.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Psychosomatische Grundversorgung</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Wenn Körper & Seele aus dem Gleichgewicht geraten – wir hören zu und helfen weiter.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Manche Beschwerden haben keine rein körperliche Ursache, sondern stehen im Zusammenhang mit seelischen Belastungen. In der psychosomatischen Grundversorgung nehmen wir uns Zeit, zuzuhören, Symptome einzuordnen und gemeinsam einen passenden Weg zu finden. Ziel ist es, die Verbindung von Körper und Psyche zu verstehen, Beschwerden zu lindern und Ihre Lebensqualität zu verbessern.</p>
+
+                      <p><span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Wir sind für Sie da</span> – in einem geschützten Rahmen, der Raum für Offenheit und Vertrauen bietet.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -378,18 +375,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Manuelle Therapie.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Manuelle Therapie</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Blockaden lösen, Bewegung fördern – mit gezielten Grifftechniken und ärztlicher Expertise.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Manuelle Therapie</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Blockaden lösen, Bewegung fördern – mit gezielten Grifftechniken und ärztlicher Expertise.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Die manuelle Therapie ist eine bewährte Methode, um Funktionsstörungen am Bewegungsapparat zu behandeln. Durch spezielle Handgriffe und Mobilisationstechniken lassen sich Blockaden sanft lösen, Schmerzen lindern und die Beweglichkeit verbessern.</p>
+
+                      <p>Wir betrachten jeden Menschen individuell und passen die Behandlung gezielt an Ihre Beschwerden an – für mehr Bewegungsfreiheit und eine nachhaltige Entlastung im Alltag. Buchen Sie Ihren <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Termin jetzt online</span>.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -397,18 +398,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Notfall- Hausarztmedizin.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Notfall- & Hausarztmedizin</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Schnelle Hilfe bei akuten Beschwerden – unkompliziert, kompetent, direkt vor Ort.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Notfall- & Hausarztmedizin</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Schnelle Hilfe bei akuten Beschwerden – unkompliziert, kompetent, direkt vor Ort.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Ob plötzliche Schmerzen, Infekte oder andere akute Gesundheitsprobleme – in unserer Praxis finden Sie schnell ärztliche Unterstützung. Wir bieten eine verlässliche Anlaufstelle für Notfälle im hausärztlichen Bereich, behandeln direkt vor Ort und koordinieren bei Bedarf die weitere Versorgung.</p>
+
+                      <p>So stellen wir sicher, dass Sie in akuten Situationen nicht allein sind, sondern schnell die richtige <span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Hilfe bekommen</span>.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -416,18 +421,22 @@
             </div>
             <div class="service px-3 w-full lg:w-1/2 mb-10">
               <div class="flex flex-wrap">
-                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="zoom-in" data-aos-duration="800">
+                <div class="service-icon pr-10 w-[200px] lg:w-[250px] mb-6 mx-auto" data-aos="fade-up">
                   <img src="./img/Zertifizierte Gelbfieberimpfstelle.webp" alt="service">
                 </div>
                 <div class="service-data w-full lg:w-[calc(100%-250px)] xxl:pr-10 xl:pt-20">
-                  <div class="service-title font-light text-lg xxl:text-[32px] mb-4 leading-tight" data-aos="fade-up" data-aos-delay="1000">Zertifizierte Gelbfieberimpfstelle</div>
-                  <div class="service-description font-light text-sm xxl:text-[16px] mb-4" data-aos="fade-up" data-aos-delay="1300">
-                    Als zertifizierte Impfstelle bieten wir Ihnen die Gelbfieberimpfung mit offizieller Bescheinigung – für Ihre sichere Reise.
-                    <div class="service-more-description font-light text-sm xxl:text-[16px] mb-4 mt-2 hidden">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos hic voluptates quibusdam placeat assumenda doloremque molestias reprehenderit ea accusamus quae? Fuga repellat hic iste. Dicta, consequuntur architecto. Ipsam quisquam reiciendis, praesentium iusto cumque ullam autem officiis aliquid quos obcaecati corrupti quia consequuntur sed atque. Odit?
+                  <div data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-title font-light text-lg xxl:text-[28px] mb-4 leading-tight">Zertifizierte Gelbfieberimpfstelle</div>
+                  <div class="service-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4">
+                    <p>Als zertifizierte Impfstelle bieten wir Ihnen die Gelbfieberimpfung mit offizieller Bescheinigung – für Ihre sichere Reise.</p>
+                    <div class="service-more-description font-opensans text-sm lg:text-[15px] lg:leading-[25px] mb-4 mt-2 hidden">
+                      <p>Die Gelbfieberimpfung ist bei vielen Fernreisen verpflichtend und schützt zuverlässig vor einer schweren, potenziell lebensbedrohlichen Erkrankung. In unserer Praxis erhalten Sie die Impfung durch geschultes Fachpersonal sowie die internationale Impfbescheinigung, die bei Einreise in bestimmte Länder erforderlich ist.</p>
+
+                      <p><span class="font-semibold italic cursor-pointer terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">Wir beraten Sie</span> außerdem zu weiteren Reiseimpfungen und stellen sicher, dass Ihr Impfschutz vollständig und aktuell ist – damit Sie Ihre Reise unbeschwert antreten können.</p>
                     </div>
                   </div>
-                  <div class="service-more-button text-sm xxl:text-[16px]"  data-aos="fade-up" data-aos-delay="1500">
+                  </div>
+                  <div class="service-more-button font-opensans text-sm lg:text-[15px] lg:leading-[25px]"  data-aos="fade-in" data-aos-delay="700">
                     <a href="#" class="">+  mehr erfahren</a>
                   </div>
                 </div>
@@ -436,16 +445,10 @@
           </div>
         </div>
       </section>
-      <section id="benefits" class="pt-24 relative">
-        <div class="benefits-top-curve">
-          <img src="./img/benefits-top-curve.svg" alt="decor">
-        </div>
-        <div class="benefits-bottom-curve">
-          <img src="./img/benefits-bottom-curve.svg" alt="decor">
-        </div>
+      <section id="benefits" class="relative">
         <div class="container">
-          <h2 class="font-light  text-[28px] lg:text-[38px] xxl:text-[42px] leading-[1.1] tracking-tight mb-8 max-w-[821px]" data-aos="fade-up" data-aos-delay="300">Mehr als Hausarzt: Wir bieten individuelle Medizin, die zu Ihnen passt.</h2>
-          <div class="mb-20" data-aos="fade-up" data-aos-delay="500">Ob jung oder alt, sportlich oder einfach ganz Sie selbst – wir sind für Sie da.</div>
+          <h2 class="font-light  text-[28px] lg:text-[38px] leading-[1.1] lg:leading-[52px] tracking-tight mb-8 max-w-[821px]" data-aos="fade-up" data-aos-delay="300">Mehr als Hausarzt: Wir bieten individuelle Medizin, die zu Ihnen passt.</h2>
+          <div class="font-opensans text-[15px] leading-[25px] mb-20" data-aos="fade-up" data-aos-delay="500">Ob jung oder alt, sportlich oder einfach ganz Sie selbst – wir sind für Sie da.</div>
         </div>
           <div class="benefits-slider-wrap relative">
             <div class="benefits-slider">
@@ -458,7 +461,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Gesund bleiben statt krank werden – Vorsorgen statt nachsorgen.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -476,7 +479,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Sicher durch alle Jahreszeiten – wir beraten Sie individuell und impfen mit Ruhe und Aufklärung.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -494,7 +497,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Stärkung von innen: Infusionen unterstützen bei Erschöpfung, Infekten oder chronischen Beschwerden.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -512,7 +515,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Wir prüfen Ihre Herzleistung unter Bewegung – verlässlich, sicher und gut erklärt.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -530,7 +533,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 von der Erstversorgung über moderne Verbandstechniken bis zur engmaschigen Verlaufskontrolle.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -548,11 +551,11 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Von EKG über Lungenfunktion bis Ultraschall: Moderne Diagnostik gehört bei uns zur Basis.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
-                    <span>Zur Übersicht der Diagnostik</span>
+                    <span>Untersuchungstermin vereinbaren</span>
                   </a>
                 </div>
               </div>
@@ -566,7 +569,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Blut sagt viel über Ihre Gesundheit – wir analysieren es gezielt und erklären es verständlich.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -584,7 +587,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Sanfte Unterstützung aus der Natur – individuell abgestimmt auf Ihre Beschwerden und Wünsche.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -602,7 +605,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Gesunde Ernährung, die zu Ihrem Leben passt – alltagstauglich, medizinisch fundiert, ohne Dogmen.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -620,7 +623,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 In akuten Situationen sind wir für Sie da – schnell, kompetent und mit kühlem Kopf.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="mailto:kontakt@allgemeinarztpraxis-scheel.de">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -638,7 +641,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Wenn Sie nicht zu uns kommen können, kommen wir zu Ihnen – mit Zeit, Ruhe und medizinischer Erfahrung.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="tel:091415075">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -656,7 +659,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Ob im Pflegeheim oder zu Hause – wir betreuen Sie medizinisch dort, wo Sie leben.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="mailto:kontakt@allgemeinarztpraxis-scheel.de">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -674,7 +677,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Bei Atemnot, Husten oder zur Vorsorge: Wir testen Ihre Lunge schonend und präzise.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -692,7 +695,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Wenn’s dumpf klingt oder drückt: Wir sorgen sanft für freie Ohren und besseres Hören.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="#" class="terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -710,7 +713,7 @@
               <div class="benefits-description text-[12px] absolute z-50 leading-normal">
                 Weil der Alltag nicht immer planbar ist, bieten wir Ihnen auch Termine außerhalb der klassischen Zeiten.
                 <div class="benefits-link mt-2">
-                  <a href="#">
+                  <a href="tel:091415075">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -720,26 +723,32 @@
               </div>
             </div>
           </div>
-            <div class="benefits-slider-left-transparence"></div>
-            <div class="benefits-slider-right-transparence"></div>
             <div class="benefits-slider-prev"><img src="./img/slider-left-arrow-black.svg" alt="arrow"></div>
             <div class="benefits-slider-next"><img src="./img/slider-right-arrow-black.svg" alt="arrow"></div>
           </div>
       </section>
-      <section id="appointment" class="pb-16 lg:pb-24">
-        <div class="container">
+      <section id="appointment" class="pb-16 lg:pb-24 relative">
+        <div class="appointment-top-curve">
+          <img src="./img/appointment-top-curve.svg" alt="decor">
+        </div>
+        <div class="container relative">
           <div class="flex flex-wrap -mx-3 items-center">
-            <div class="w-full px-3 lg:w-1/2 mb-6 lg:mb-0"  data-aos="fade-right" data-aos-delay="500">
-              <img src="./img/appointment-img.webp" alt="appointment">
+            <div class="w-full px-3 lg:w-1/2 mb-6 lg:mb-0 relative">
+              <img src="./img/Rezeptbestellung.svg" alt="" class="Rezeptbestellung-img">
+              <img src="./img/Terminbuchung.svg" alt="" class="Terminbuchung-img">
+              <img src="./img/eResept.svg" alt="" class="eresept-img">
             </div>
-            <div class="w-full px-3 lg:w-1/2 xxl:pl-20">
-              <h2 class="font-light text-[28px] lg:text-[38px] xxl:text-[42px] leading-normal tracking-tight mb-6"  data-aos="fade-left" data-aos-delay="800">
+            <div class="w-full px-3 lg:w-1/2 xxl:pl-20 pt-16 xl:pt-24">
+              <h2 class="font-light text-[28px] lg:text-[38px] leading-normal lg:leading-[52px] max-w-[380px] tracking-tight mb-6"  data-aos="fade-left" data-aos-delay="800">
                 Terminbuchung jetzt ganz einfach!
               </h2>
-              <div class="mb-8 text-sm lg:text-base"  data-aos="fade-left" data-aos-delay="1000">Buchen Sie Ihren Wunschtermin oder Ihr Rezept online – schnell, sicher und rund um die Uhr. Nach dem Absenden erhalten Sie zeitnah eine Bestätigung von uns.</div>
-              <div class="flex flex-wrap gap-4"  data-aos="fade-left" data-aos-delay="1200">
-                <a href="#" class="btn black-btn">Termin vereinbaren</a>
-                <a href="#" class="btn black-btn">Rezept bestellen</a>
+              <div class="mb-8 font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-w-[570px]"  data-aos="fade-left" data-aos-delay="1000">Buchen Sie Ihren Wunschtermin oder Ihr Rezept online – schnell, sicher und rund um die Uhr. Nach dem Absenden erhalten Sie zeitnah eine Bestätigung von uns.</div>
+              <div class="flex flex-wrap gap-4 mb-3 justify-center lg:justify-start lg:mb-0">
+                <a href="https://webtermin.medatixx.de/#/4556e4df-bedd-45c0-a862-2f31a1db26a9" target="_blank" class="btn black-btn" data-aos="fade-left" data-aos-delay="1200">Termin vereinbaren</a>
+                <a href="#" class="btn black-btn" data-aos="fade-left" data-aos-delay="1400">Rezept bestellen</a>
+              </div>
+              <div class="hero-note text-center text-[7px] lg:max-w-[308px]" data-aos="fade-in" data-aos-delay="1800">
+                *Terminservice von medatixx – öffnet in neuem Tab
               </div>
             </div>
           </div>
@@ -747,32 +756,34 @@
       </section>
       <section id="friederike" class="py-16 lg:py-24 xxl:pb-52 border-b-[14px] border-yellow ">
         <div class="container">
-          <div class="flex flex-wrap -mx-3 items-center">
+          <div class="flex flex-wrap -mx-3">
             
-            <div class="w-full px-3 lg:w-1/2 xl:pr-20 xxl:pr-40 mb-6 lg:mb-0">
-              <h2 class="font-light text-[28px] lg:text-[56px] xxl:text-[62px] leading-normal tracking-tight mb-6" data-aos="fade-right" data-aos-delay="500">
+            <div class="w-full px-3 lg:w-1/2 xl:pr-20 xxl:pr-40 mb-6 lg:mb-0 lg:pt-16">
+              <h2 class="font-extralight text-[28px] lg:text-[56px] xxl:text-[62px] leading-none tracking-tight mb-6" data-aos="fade-right" data-aos-delay="500">
                 Dr. med.<br>Friederike Scheel
               </h2>
-              <div class="mb-8 text-sm lg:text-base" data-aos="fade-right" data-aos-delay="700">
+              <div class="mb-8 font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-right" data-aos-delay="700">
                 <p class="font-semibold">Hallo, ich bin Dr. med. Friederike Scheel – Ihre neue Hausärztin in Weißenburg.</p>
                 <p>Mit Herz, Fachwissen und Zeit bin ich ab sofort für Sie da – für Prävention, Sportmedizin und moderne Allgemeinmedizin.</p>
                 <p>Ich freue mich darauf, Sie kennenzulernen!</p>
                 <div class="bio-more-info hidden">
-                  <p class="font-semibold">Hausärztin in meiner Heimatregion für Sie tätig zu sein – das erfüllt mich mit großer Freude und Verantwortung. </p>
+                  <p class="font-semibold">Als Hausärztin in meiner Heimatregion für Sie tätig zu sein – das erfüllt mich mit großer Freude und Verantwortung.</p> 
 
-                  <p>Nach dem Medizinstudium an den Universitäten Göttingen und Würzburg bin ich seit 2019 als Ärztin in Weißenburg tätig. Zusätzlich engagiere ich mich seit zwei Jahren auch als Notärztin in der Region – eine Aufgabe, die mir viel bedeutet und meine ärztliche Arbeit entscheidend prägt.</p>
+                  <p>Nach dem Medizinstudium an den Universitäten Göttingen und Würzburg bin ich seit 2019 als Ärztin in Weißenburg tätig.</p> 
 
-                  <p>Ich bin Fachärztin für Allgemeinmedizin mit den Zusatzbezeichnungen Notfallmedizin, Naturheilverfahren und Palliativmedizin. Zudem habe ich Weiterbildungen in Reisemedizin, psychosomatischer Grundversorgung, Akupunktur und Ernährungsmedizin abgeschlossen.</p>
+                  <p>Während meiner Ausbildung und späteren Tätigkeit im Krankenhaus Weißenburg und in verschiedenen allgemeinärztlichen Praxen habe ich mich kontinuierlich weiterqualifiziert und zusätzliche Fachkenntnisse erworben – insbesondere in den Bereichen Notfallmedizin, Palliativmedizin, Naturheilverfahren, Reisemedizin, Akupunktur sowie psychosomatische Grundversorgung.</p>
 
-                  <p>Aktuell befinde ich mich in der Weiterbildung für Manuelle Therapie / Chiropraktik sowie Sportmedizin, die ich voraussichtlich bis Ende 2026 abschließen werde.
-                  In meiner Praxis verfolge ich einen ganzheitlichen Ansatz: fundierte Allgemeinmedizin, menschliche Nähe und individuelle Betreuung – mit Zeit, Sorgfalt und einem offenen Ohr für Ihre Anliegen.</p>
+                  <p>Ich bin Fachärztin für Allgemeinmedizin mit den Zusatzbezeichnungen Notfallmedizin, Naturheilverfahren und Palliativmedizin. Weitere Qualifikationen plane ich im Bereich Sportmedizin sowie Manuelle Therapie/Chirotherapie; diese Weiterbildungen werde ich voraussichtlich bis Ende 2026 abschließen.</p>
+
+                  <p>Ich lebe mit meiner Familie wieder in Weißenburg – einer Stadt, die mir beruflich wie persönlich am Herzen liegt. In meiner Praxis verfolge ich einen ganzheitlichen Ansatz: fundierte Allgemeinmedizin, menschliche Nähe und individuelle Betreuung – mit Zeit, Sorgfalt und einem offenen Ohr für Ihre Anliegen.</p>
 
                   <p class="font-semibold">Lust auf einen Blick hinter die Kulissen?</p>
-                  <p>Auf Instagram nehme ich Sie unter <a href="https://www.instagram.com/doc_fritzi" target="_blank">@doc_fritzi</a> mit durch meinen Alltag als Ärztin – direkt, ehrlich und mit dem, was im echten Praxisleben zählt. </p> 
+                    
+                  <p>Auf Instagram unter <a href="https://www.instagram.com/doc_fritzi" target="_blank">@doc_fritzi</a> nehme ich Sie mit in unseren Praxisalltag – direkt, ehrlich und nah am echten Leben.</p>
 
                 </div>
               </div>
-              <div class="text-sm xxl:text-[16px]" data-aos="fade-right" data-aos-delay="900">
+              <div class="font-opensans text-sm lg:text-[15px] lg:leading-[25px]" data-aos="fade-right" data-aos-delay="900">
                 <a href="#" class="bio-more-button">+  mehr erfahren</a>
               </div>
             </div>
@@ -780,7 +791,7 @@
               <img src="./img/friederike-img.webp" alt="Dr. med. Friederike Scheel" data-aos="fade-left" data-aos-delay="500">
               <div class="absolute" data-aos="fade-up" data-aos-delay="700">
                 <div class="font-semibold text-base mb-2">
-                  <a href="#" class="text-black hover:text-pink transition-all">#DOC_FRITZI</a>
+                  <a href="#" class="text-black hover:text-pink transition-all">#doc_fritzi</a>
                 </div>
                 <div class="social-buttons flex gap-2">
                   <a href="#">
@@ -794,25 +805,6 @@
                         </g>
                       </g>
                     </svg>  
-                  </a>
-                  <a href="#">
-                    <svg viewBox="0 0 18.4937 18.4937" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.493652" height="18.493652" fill="none" customFrame="#000000">
-                      <g>
-                        <path class="circle" d="M9.24688 18.4938C4.13858 18.4938 0 14.3552 0 9.24688C0 4.13858 4.13858 0 9.24688 0C14.3552 0 18.4938 4.13858 18.4938 9.24688C18.4938 14.3552 14.3552 18.4938 9.24688 18.4938Z" fill="rgb(109,109,109)" fill-rule="nonzero" />
-                        <g id="Group">
-                          <path d="M14.3119 8.98902C14.2429 6.31517 12.0438 4.17285 9.33341 4.17285C6.62305 4.17285 4.47667 6.27054 4.359 8.89975C4.359 8.97279 4.35495 9.04582 4.35495 9.1148C4.35495 10.048 4.61462 10.9204 5.06905 11.6669L4.17236 14.3164L6.93142 13.44C7.64552 13.8295 8.46512 14.0567 9.33747 14.0567C12.0884 14.0567 14.3159 11.8454 14.3159 9.1148C14.3159 9.07422 14.3159 9.02959 14.3159 8.98902L14.3119 8.98902ZM9.33747 13.2696C8.48541 13.2696 7.69421 13.018 7.03285 12.5798L5.42611 13.0911L5.94952 11.5493C5.4464 10.8635 5.1502 10.0237 5.1502 9.11074C5.1502 8.97684 5.15831 8.83889 5.17049 8.70905C5.37742 6.60731 7.16674 4.95594 9.33747 4.95594C11.5082 4.95594 13.3421 6.64788 13.5085 8.78615C13.5166 8.89164 13.5247 9.00119 13.5247 9.11074C13.5247 11.4032 11.6461 13.2655 9.33747 13.2655L9.33747 13.2696Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
-                          <path d="M11.6192 10.1138C11.4975 10.0529 10.897 9.76077 10.7834 9.7202C10.6698 9.67962 10.5886 9.65934 10.5075 9.78106C10.4263 9.90278 10.191 10.1746 10.122 10.2558C10.049 10.3369 9.98001 10.345 9.85829 10.2842C9.73656 10.2233 9.34299 10.0975 8.87639 9.68368C8.51528 9.36314 8.26778 8.96957 8.1988 8.84785C8.12983 8.72613 8.19069 8.66121 8.25155 8.60035C8.30835 8.54354 8.37327 8.45834 8.43413 8.38936C8.45036 8.36907 8.46253 8.34879 8.47876 8.33256C8.50717 8.28793 8.52746 8.24735 8.55586 8.18649C8.59643 8.10534 8.57614 8.03637 8.54774 7.9755C8.51934 7.91464 8.27183 7.3182 8.1704 7.07476C8.06896 6.83131 7.96753 6.87594 7.89449 6.87594C7.82146 6.87594 7.74437 6.86377 7.66322 6.86377C7.58207 6.86377 7.44818 6.89217 7.33863 7.01389C7.22502 7.13562 6.9126 7.42775 6.9126 8.02419C6.9126 8.16215 6.93694 8.30416 6.97752 8.43805C7.09924 8.86408 7.36703 9.21708 7.41166 9.27794C7.47252 9.35909 8.2556 10.6209 9.49718 11.1078C10.7387 11.5907 10.7387 11.4284 10.9619 11.4081C11.1851 11.3878 11.6841 11.116 11.7856 10.8319C11.887 10.5479 11.887 10.3085 11.8586 10.2558C11.8302 10.2071 11.745 10.1746 11.6273 10.1178L11.6192 10.1138Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
-                        </g>
-                      </g>
-                    </svg>
-                  </a>
-                  <a href="#">
-                    <svg viewBox="0 0 18.4937 18.4937" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.493652" height="18.493652" fill="none" customFrame="#000000">
-                      <g>
-                        <path class="circle" d="M9.24688 18.4938C4.13858 18.4938 0 14.3552 0 9.24688C0 4.13858 4.13858 0 9.24688 0C14.3552 0 18.4938 4.13858 18.4938 9.24688C18.4938 14.3552 14.3552 18.4938 9.24688 18.4938Z" fill="rgb(109,109,109)" fill-rule="nonzero" />
-                        <path d="M7.83983 14.8393L10.0917 14.8393L10.0917 9.20358L11.6619 9.20358L11.8283 7.31688L10.0917 7.31688L10.0917 6.24166C10.0917 5.79534 10.181 5.62087 10.6111 5.62087L11.8283 5.62087L11.8283 3.66113L10.2702 3.66113C8.59452 3.66113 7.83983 4.39958 7.83983 5.81157L7.83983 7.31688L6.66724 7.31688L6.66724 9.22792L7.83983 9.22792L7.83983 14.8393Z" fill="rgb(255,255,255)" fill-rule="nonzero" />
-                      </g>
-                    </svg>
                   </a>
                 </div>
               </div>
@@ -828,10 +820,10 @@
           </h2>
           <div class="faqs-wrap">
             <div class="faq-item py-7 border border-black pl-4 lg:pl-16 pr-28 rounded-md mb-3" data-aos="fade-up" data-aos-delay="1000">
-              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[24px] relative">
+              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[22px] relative">
                 Brauche ich für einen Besuch in der Praxis einen Termin?
               </div>
-              <div class="faq-answer text-sm lg:text-base max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
+              <div class="faq-answer font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
                 <p>Ja, wir empfehlen grundsätzlich eine Terminvereinbarung, um Wartezeiten für Sie möglichst kurz zu halten und eine reibungslose Versorgung zu gewährleisten. In dringenden Fällen können Sie sich aber auch ohne Termin bei uns melden – wir versuchen, Ihnen so schnell wie möglich zu helfen. Bitte rufen Sie uns in solchen Fällen vorher kurz an.</p>
                 <p class="mb-2">
                   <a href="#" class="text-xs text-black hover:text-pink arrow-link">
@@ -853,10 +845,10 @@
             </div>
 
             <div class="faq-item py-7 border border-black pl-4 lg:pl-16 pr-28 rounded-md mb-3" data-aos="fade-up" data-aos-delay="1000">
-              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[24px] relative">
+              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[22px] relative">
                 Kann ich auch telefonisch ein Rezept oder eine Überweisung bestellen?
               </div>
-              <div class="faq-answer text-sm lg:text-base max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
+              <div class="faq-answer font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
                 <p>Ja, gerne! Wenn Sie ein Folgerezept oder eine Überweisung benötigen, können Sie uns einfach anrufen – wir bereiten die Unterlagen vor und Sie holen sie nach Rücksprache bequem ab.</p>
                 <p class="mb-2">
                   <a href="#" class="text-xs text-black hover:text-pink arrow-link">
@@ -877,10 +869,10 @@
               </div>
             </div>
             <div class="faq-item py-7 border border-black pl-4 lg:pl-16 pr-28 rounded-md mb-3" data-aos="fade-up" data-aos-delay="1000">
-              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[24px] relative">
+              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[22px] relative">
                 Bietet Ihre Praxis auch Hausbesuche an?
               </div>
-              <div class="faq-answer text-sm lg:text-base max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
+              <div class="faq-answer font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
                 <p>Ja – wenn es Ihnen nicht möglich ist, persönlich in die Praxis zu kommen, besuchen wir Sie nach medizinischer Notwendigkeit auch zu Hause. Bitte melden Sie sich telefonisch, um einen Hausbesuch zu vereinbaren.</p>
                 <p class="mb-2">
                   <a href="#" class="text-xs text-black hover:text-pink arrow-link">
@@ -901,10 +893,10 @@
               </div>
             </div>
             <div class="faq-item py-7 border border-black pl-4 lg:pl-16 pr-28 rounded-md mb-3" data-aos="fade-up" data-aos-delay="1000">
-              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[24px] relative">
+              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[22px] relative">
                 Kann ich auch eine Krankschreibung telefonisch erhalten?
               </div>
-              <div class="faq-answer text-sm lg:text-base max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
+              <div class="faq-answer font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
                 <p>In bestimmten Fällen – etwa bei leichten Erkältungssymptomen – ist eine telefonische Krankschreibung möglich. Rufen Sie uns an, wir besprechen gemeinsam, was in Ihrem Fall sinnvoll und machbar ist.</p>
                 <p class="mb-2">
                   <a href="#" class="text-xs text-black hover:text-pink arrow-link">
@@ -925,13 +917,13 @@
               </div>
             </div>
             <div class="faq-item py-7 border border-black pl-4 lg:pl-16 pr-28 rounded-md mb-3" data-aos="fade-up" data-aos-delay="1000">
-              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[24px] relative">
+              <div class="faq-question cursor-pointer font-light text-base lg:text-lg xxl:text-[22px] relative">
                 Welche Vorsorgeuntersuchungen bieten Sie an?
               </div>
-              <div class="faq-answer text-sm lg:text-base max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
+              <div class="faq-answer font-opensans text-sm lg:text-[15px] lg:leading-[25px] max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
                 <p>Wir bieten Ihnen alle gängigen Vorsorgeleistungen – vom Gesundheits-Check-up über Krebsvorsorge bis hin zu individuellen Präventionsangeboten. Gerne beraten wir Sie, was in Ihrem Alter und Ihrer Lebenssituation sinnvoll ist. </p>
                 <p class="mb-0">
-                  <a href="#" class="text-xs text-black hover:text-pink arrow-link">
+                  <a href="#" class="text-xs text-black hover:text-pink arrow-link terminbuchung-trigger" data-configid="4556e4df-bedd-45c0-a862-2f31a1db26a9">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1.70265 8.33451L0.893669 7.52552L6.90918 1.49964L2.26272 1.49964L2.27309 0.379508H8.83829V6.95509H7.70779L7.71817 2.30862L1.70265 8.33451Z" fill="#3F4857"/>
                     </svg>
@@ -959,11 +951,11 @@
     <footer class="bg-black text-white py-10 lg:py-16">
       <div class="container">
         <div class="footer-logo mb-20">
-            <a href="/"><img src="./img/Logo White.svg" alt="logo" class="h-10 lg:h-12"></a> 
+            <a href="/"><img src="./img/Logo White.svg" alt="logo"></a> 
         </div>
         <div class="flex flex-wrap mb-10 -mx-3">
           <div class="w-full px-3 lg:w-1/2 xl:w-1/4 mb-6">
-            <div class="footer-site-description font-light text-sm lg:text-base">
+            <div class="footer-site-description font-opensans font-light text-sm lg:text-[15px] lg:leading-[25px]">
                 <p>Dr. Friederike Scheel<br>
                 Ihre Hausärztin in Weißenburg</p>
                 <p>Fachärztin für Allgemeinmedizin Notfallmedizin, Palliativmedizin, Naturheilverfahren,
@@ -974,13 +966,13 @@
           </div>
           <div class="hidden xl:block xl:w-1/4"></div>
           <div class="w-full px-3 lg:w-1/2 xl:w-1/4 mb-6">
-             <div class="footer-address font-light text-sm lg:text-base mb-6">
+             <div class="footer-address font-light text-sm lg:text-[15px] lg:leading-[25px] font-opensans mb-6">
               Niederhofener Str. 1<br>91781 Weißenburg i. Bay.
              </div>
-             <div class="footer-social font-light text-sm lg:text-base">
-                <div class="mb-5"><a href="#" class="text-white hover:text-pink">Anfahrt</a></div>
+             <div class="footer-social font-light text-sm lg:text-[15px] lg:leading-[25px] font-opensans">
+                <div class="mb-5"><a href="https://maps.app.goo.gl/apkfCJeTnrY3VF7L7" class="text-white hover:text-pink" target="_blank">Anfahrt</a></div>
                 <div class="flex gap-4 lg:gap-7">
-                  <a href="#" class="google-link">
+                  <a href="#" class="google-link" target="_blank">
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_46_1568)">
                       <mask id="mask0_46_1568" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="22">
@@ -1009,7 +1001,7 @@
                       </defs>
                     </svg>
                   </a>
-                  <a href="#" class="instagram-link">
+                  <a href="https://www.instagram.com/doc_fritzi" class="instagram-link" target="_blank">
                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.5023 5.35948C7.52275 5.35948 5.11941 7.87783 5.11941 11C5.11941 14.1222 7.52275 16.6405 10.5023 16.6405C13.4819 16.6405 15.8853 14.1222 15.8853 11C15.8853 7.87783 13.4819 5.35948 10.5023 5.35948ZM10.5023 14.6671C8.57685 14.6671 7.00273 13.0225 7.00273 11C7.00273 8.97746 8.57217 7.33292 10.5023 7.33292C12.4325 7.33292 14.002 8.97746 14.002 11C14.002 13.0225 12.4278 14.6671 10.5023 14.6671ZM17.361 5.12875C17.361 5.8602 16.7988 6.44438 16.1055 6.44438C15.4074 6.44438 14.8499 5.85529 14.8499 5.12875C14.8499 4.40221 15.4121 3.81312 16.1055 3.81312C16.7988 3.81312 17.361 4.40221 17.361 5.12875ZM20.9262 6.46402C20.8466 4.70166 20.4624 3.14058 19.2303 1.8544C18.0028 0.568225 16.5131 0.165681 14.8312 0.0773179C13.0978 -0.0257726 7.90223 -0.0257726 6.16882 0.0773179C4.49163 0.160772 3.00184 0.563316 1.76972 1.84949C0.537591 3.13567 0.158115 4.69675 0.0737869 6.45911C-0.0245956 8.27547 -0.0245956 13.7196 0.0737869 15.536C0.15343 17.2983 0.537591 18.8594 1.76972 20.1456C3.00184 21.4318 4.48695 21.8343 6.16882 21.9227C7.90223 22.0258 13.0978 22.0258 14.8312 21.9227C16.5131 21.8392 18.0028 21.4367 19.2303 20.1456C20.4577 18.8594 20.8419 17.2983 20.9262 15.536C21.0246 13.7196 21.0246 8.28037 20.9262 6.46402ZM18.6868 17.4849C18.3214 18.4471 17.614 19.1883 16.6911 19.5761C15.309 20.1505 12.0296 20.018 10.5023 20.018C8.97507 20.018 5.69096 20.1456 4.31361 19.5761C3.39537 19.1932 2.68795 18.452 2.31785 17.4849C1.76972 16.0367 1.89621 12.6004 1.89621 11C1.89621 9.39964 1.7744 5.95838 2.31785 4.51512C2.68327 3.55294 3.39069 2.81167 4.31361 2.42385C5.69565 1.84949 8.97507 1.98204 10.5023 1.98204C12.0296 1.98204 15.3137 1.8544 16.6911 2.42385C17.6093 2.80676 18.3167 3.54803 18.6868 4.51512C19.235 5.96329 19.1085 9.39964 19.1085 11C19.1085 12.6004 19.235 16.0416 18.6868 17.4849Z" fill="white"/>
                     </svg>
@@ -1018,9 +1010,9 @@
              </div>
           </div>
           <div class="w-full px-3 lg:w-1/2 xl:w-1/4">
-            <div class="text-base font-semibold"><a href="#" class="text-white hover:text-yellow">Online-Terminbuchung</a></div>
-            <div class="text-base font-semibold mb-6"><a href="#" class="text-white hover:text-pink">Online-Rezept</a></div>
-            <div class="font-light text-sm lg:text-base mb-6">
+            <div class="font-opensans text-[15px] leading-[25px] font-semibold"><a href="#" class="text-white hover:text-yellow">Online-Terminbuchung</a></div>
+            <div class="font-opensans text-[15px] leading-[25px] font-semibold mb-6"><a href="#" class="text-white hover:text-pink">Online-Rezept</a></div>
+            <div class="font-opensans font-light text-sm lg:text-[15px] lg:leading-[25px] mb-6">
               Sprechstunden
               <div class="flex -mx-3">
                 <div class="px-3">
@@ -1041,9 +1033,10 @@
           </div>
         </div>
         <div class="flex justify-center lg:justify-end font-light text-sm lg:text-base">
-          <div class="w-full px-3 text-center lg:text-left lg:w-1/2 xl:w-1/4">
-            <div><a href="#" class="text-white hover:text-grey">Impressum</a></div>
-            <div><a href="#" class="text-white hover:text-[#EFD8D4]">Datenschutz</a></div>
+          <div class="w-full px-3 text-center lg:text-left lg:w-1/2 xl:w-1/4 text-sm">
+            <div><a href="impressum.html" class="text-white hover:text-grey">Impressum</a></div>
+            <div><a href="agb.html" class="text-white hover:text-grey">AGB’s</a></div>
+            <div><a href="datenschutz.html" class="text-white hover:text-[#EFD8D4]">Datenschutz</a></div>
           </div>
         </div>
     </footer>
@@ -1107,6 +1100,7 @@
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
+  <script src="https://webtermin.medatixx.de/plugin/terminbuchung-plugin.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 

@@ -21,7 +21,7 @@ jQuery('.line-wrap').slick({
     autoplay: true,
     autoplaySpeed: 1,
     variableWidth: true,
-    speed: 10000,
+    speed: 30000,
     dots: false,
     arrows: false,
     cssEase: 'linear',
@@ -36,13 +36,14 @@ jQuery(document).ready(function () {
 
   // ініціалізація slick
   slider.slick({
-    autoplay: false,
-  slidesToScroll: 1,
+  autoplay: false,
+  slidesToScroll: 5,
   slidesToShow: 9,
   arrows: true,
   dots: false,
   infinite: true,
-  speed: 800,
+  cssEase: 'ease-in-out',
+  speed: 1500,
   prevArrow: jQuery('.benefits-slider-prev'),
   nextArrow: jQuery('.benefits-slider-next'),
   responsive: [
@@ -50,35 +51,35 @@ jQuery(document).ready(function () {
       breakpoint: 1500,
       settings: {
         slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
       },
     },
     {
       breakpoint: 1200,
       settings: {
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
       },
     },
     {
       breakpoint: 992,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 680,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 510,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
@@ -107,6 +108,7 @@ jQuery(document).ready(function () {
   if (sliderEl) {
     observer.observe(sliderEl);
   }
+
 });
 
 jQuery('.contact-slider').slick({
@@ -172,7 +174,7 @@ jQuery(document).on('click', 'a[href^="#"]', function (event) {
   } else {
     event.preventDefault();
     jQuery('html, body').animate({
-        scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top
+        scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 50
     }, 500);
   }
   
@@ -350,7 +352,137 @@ document.addEventListener("scroll", function () {
 
 
 AOS.init({
-  duration: 1000, // тривалість анімації
+  duration: 800, // нова тривалість анімації
+  easing: 'ease-in-out', // плавність анімації
   once: true,
-  
+  offset: 80,
+  delay: 50,
+});
+
+
+jQuery('.terminbuchung-trigger').on('click', function (event) {
+  event.preventDefault();
+});
+
+
+window.addEventListener("scroll", () => {
+  const r1 = moveWithScroll(".Rezeptbestellung-img", 150, 300);
+  const r2 = moveWithScroll(".Terminbuchung-img", 150, 450);
+
+  const eresept = document.querySelector(".eresept-img");
+  if (!eresept) return;
+
+  if (r1.reached && r2.reached) {
+    eresept.classList.add("zoom-in");
+  } else {
+    eresept.classList.remove("zoom-in"); // ховаємо в будь-якому іншому випадку
+  }
+});
+
+function moveWithScroll(selector, startOffset, distance) {
+  const el = document.querySelector(selector);
+  if (!el) return { reached: false };
+
+  const rect = el.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // від 0 до 1
+  const progress = 1 - Math.min(Math.max(rect.top / windowHeight, 0), 1);
+  let offset = startOffset - progress * distance;
+  if (offset < 0) offset = 0;
+
+  el.style.transform = `translateY(${offset}px)`;
+
+  // вважаємо "на місці", якщо offset == 0
+  return { reached: offset === 0 };
+}
+
+
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.de = {}));
+}(this, (function (exports) { 'use strict';
+
+  var fp = typeof window !== "undefined" && window.flatpickr !== undefined
+      ? window.flatpickr
+      : {
+          l10ns: {},
+      };
+  var German = {
+      weekdays: {
+          shorthand: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+          longhand: [
+              "Sonntag",
+              "Montag",
+              "Dienstag",
+              "Mittwoch",
+              "Donnerstag",
+              "Freitag",
+              "Samstag",
+          ],
+      },
+      months: {
+          shorthand: [
+              "Jan",
+              "Feb",
+              "Mär",
+              "Apr",
+              "Mai",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Okt",
+              "Nov",
+              "Dez",
+          ],
+          longhand: [
+              "Januar",
+              "Februar",
+              "März",
+              "April",
+              "Mai",
+              "Juni",
+              "Juli",
+              "August",
+              "September",
+              "Oktober",
+              "November",
+              "Dezember",
+          ],
+      },
+      firstDayOfWeek: 1,
+      weekAbbreviation: "KW",
+      rangeSeparator: " bis ",
+      scrollTitle: "Zum Ändern scrollen",
+      toggleTitle: "Zum Umschalten klicken",
+      time_24hr: true,
+  };
+  fp.l10ns.de = German;
+  var de = fp.l10ns;
+
+  exports.German = German;
+  exports.default = de;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  flatpickr("#datepicker", {
+    dateFormat: "d.m.Y",   // і для value, і для відображення
+    locale: "de",
+    maxDate: (() => {
+      let d = new Date();
+      d.setFullYear(d.getFullYear() - 18);
+      return d;
+    })(),
+    minDate: (() => {
+      let d = new Date();
+      d.setFullYear(d.getFullYear() - 110);
+      return d;
+    })()
+  });
 });

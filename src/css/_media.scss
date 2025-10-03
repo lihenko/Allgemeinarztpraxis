@@ -18,6 +18,7 @@ $gold : #AD954F;
 
 
 @media screen and (min-width: 480px){
+
  
 }
 
@@ -38,6 +39,133 @@ $gold : #AD954F;
     cursor: pointer;
     z-index: 99;
   }
+  #buttons{
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(235px);
+    & .termin-buchen{
+      display: flex;
+      background-color: #3F4857;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 18px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .rezept-bestellen{
+      display: flex;
+      background-color: #CB9597;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 18px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .sprechstunden{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #EFD8D4;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-left: 18px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-data{
+        font-size: 13px;
+        line-height: 22px;
+        height: 0;
+        overflow: hidden;
+        //transition: all 0.8s ease-in-out;
+        & a {
+          @apply text-black;
+          & svg {
+            display: inline-block;
+            & path{
+              fill:#3F4857;
+              @apply transition-all;
+            }
+          }
+          &:hover{
+            @apply text-white;
+            & svg path{
+              fill:#fff;
+            }
+          }
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom-right-radius: 50px;
+        & .buttons-data{
+          height: auto;
+          padding-top: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        & .buttons-icon{
+          width: 100%;
+          & img{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+  #appointment{
+    padding-top: 80px;
+    & .eresept-img{
+      position: absolute;
+      top: 80px;
+      left: 12%;
+    }
+    & .Terminbuchung-img{
+      position: absolute;
+      bottom: -80px;
+      right: -30px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -50,7 +178,6 @@ $gold : #AD954F;
       & .slide-data{
         color: #fff;
         font-size: 42px;
-        font-weight: 200;
       }
     }
   }
@@ -71,14 +198,137 @@ $gold : #AD954F;
     bottom: 0;
     width: 166px;
   }
+   #buttons{
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(235px);
+    & .termin-buchen{
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .rezept-bestellen{
+      display: flex;
+      background-color: #CB9597;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .sprechstunden{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #EFD8D4;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      padding-left: 29px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-data{
+        font-size: 13px;
+        line-height: 22px;
+        height: 0;
+        overflow: hidden;
+        //transition: all 0.8s ease-in-out;
+        & a {
+          @apply text-black;
+          & svg {
+            display: inline-block;
+            & path{
+              fill:#3F4857;
+              @apply transition-all;
+            }
+          }
+          &:hover{
+            @apply text-white;
+            & svg path{
+              fill:#fff;
+            }
+          }
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom-right-radius: 50px;
+        & .buttons-data{
+          height: auto;
+          padding-top: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        & .buttons-icon{
+          width: 100%;
+          & img{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+  #appointment{
+    padding-top: 80px;
+    & .Rezeptbestellung-img{
+      margin-left: 16px;
+    }
+    & .eresept-img{
+      position: absolute;
+      left: 12%;
+    }
+    & .Terminbuchung-img{
+      position: absolute;
+      right: 0px;
+    }
+  }
 }
 
 @media screen and (min-width: 992px){
   .main-menu ul{
     & li{
       & a{
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         @apply text-black hover:text-pink;
       }
       &.current-menu-item a{
@@ -107,6 +357,132 @@ $gold : #AD954F;
   #fixed-header.fixed{
     top: 0;
   }
+  #buttons{
+    position: fixed;
+    z-index: 50;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(235px);
+    & .termin-buchen{
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .rezept-bestellen{
+      display: flex;
+      background-color: #CB9597;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 9px;
+      padding-bottom: 9px;
+      padding-left: 29px;
+      margin-bottom: 4px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-link{
+        & a{
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+      }
+    }
+    & .sprechstunden{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #EFD8D4;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      align-items: center;
+      width: 300px;
+      padding-top: 13.5px;
+      padding-bottom: 13.5px;
+      padding-left: 29px;
+      & .buttons-icon{
+        width: 44px;
+      }
+      & .buttons-data{
+        font-size: 13px;
+        line-height: 22px;
+        height: 0;
+        overflow: hidden;
+        //transition: all 0.8s ease-in-out;
+        & a {
+          @apply text-black;
+          & svg {
+            display: inline-block;
+            & path{
+              fill:#3F4857;
+              @apply transition-all;
+            }
+          }
+          &:hover{
+            @apply text-white;
+            & svg path{
+              fill:#fff;
+            }
+          }
+        }
+      }
+      &:hover{
+        transform: translateX(-235px);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom-right-radius: 50px;
+        & .buttons-data{
+          height: auto;
+          padding-top: 15px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        & .buttons-icon{
+          width: 100%;
+          & img{
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+  #appointment{
+    padding-top: 130px;
+    & .Rezeptbestellung-img{
+      margin-left: 0;
+    }
+    & .eresept-img{
+      position: absolute;
+      left: 16%;
+    }
+    & .Terminbuchung-img{
+      position: absolute;
+      right: 0px;
+    }
+  }
+  #home-hero{
+    min-height: calc(100vh - 85px - 62px);
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -120,64 +496,75 @@ $gold : #AD954F;
     & .slide-item{
       &.slide-1 .slide-data{
         max-width: 784px;
-        left: 50px;
+        left: 80px;
         margin-right: auto;
-        bottom: 80px;
+        bottom: 100px;
       }
       &.slide-2 .slide-data{
         max-width: 621px;
+        right: 80px;
         margin-left: auto;
-        bottom: 80px;
+        bottom: 100px;
       }
       &.slide-3 .slide-data{
         max-width: 659px;
         margin-right: auto;
-        left: 50px;
-        bottom: 80px;
+        left: 80px;
+        bottom: 100px;
       }
       &.slide-4 .slide-data{
         max-width: 571px;
+        right: 80px;
         margin-left: auto;
-        bottom: 80px;
+        bottom: 100px;
       }
       &.slide-5 .slide-data{
         max-width: 639px;
         margin-right: auto;
-        left: 50px;
-        bottom: 80px;
+        left: 80px;
+        bottom: 100px;
       }
       &.slide-6 .slide-data{
         max-width: 639px;
         margin-right: auto;
-        left: 50px;
-        bottom: 80px;
+        left: 80px;
+        bottom: 100px;
       }
       &.slide-7 .slide-data{
         max-width: 639px;
         margin-right: auto;
-        left: 50px;
-        bottom: 80px;
+        left: 80px;
+        bottom: 100px;
       }
       &.slide-8 .slide-data{
         max-width: 639px;
         margin-right: auto;
-        left: 50px;
-        bottom: 80px;
+        left: 80px;
+        bottom: 100px;
       }
     }
   }
-  #buttons{
-    & .sprechstunden{
-
-      padding-top: 18px;
-      padding-bottom: 18px;
-     }
-  } 
+  #appointment{
+    & .eresept-img{
+      left: 12%;
+    }
+  }
 }
 
 
 @media screen and (min-width: 1500px){
+  #buttons{
+    & .sprechstunden{
 
+      padding-top: 13.5px;
+      padding-bottom: 13.5px;
+     }
+  } 
+  #appointment{
+    & .eresept-img{
+      left: 78px;
+    }
+  }
 }
 
 @media screen and (min-width: 1920px){
